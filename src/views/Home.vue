@@ -1,7 +1,57 @@
 <template>
-  <div class="home">Home</div>
+  <div class="home">
+    <div class="feature-card">
+      <router-link to="/movie/tt12343534">
+        <img
+          src="https://i0.wp.com/media.criticalhit.net//2021/01/Jujutsu-kaisen.jpg?resize=850%2C478&ssl=1"
+          alt="Jujutsu Kaisen Poster"
+          class="featured-img"
+        />
+        <div class="detail">
+          <h3>Jujutsu Kaisen</h3>
+          <p>
+            A boy swallows a cursed talisman - the finger of a demon - and
+            becomes cursed himself. He enters a shaman's school to be able to
+            locate the demon's other body parts and thus exorcise himself.
+          </p>
+        </div>
+      </router-link>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {};
 </script>
+
+<style lang="scss">
+.home {
+  .feature-card {
+    position: relative;
+  }
+  .featured-img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .detail {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 16px;
+    z-index: 1;
+  }
+
+  h3 {
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: white;
+  }
+}
+</style>
